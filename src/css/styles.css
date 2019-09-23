@@ -23,6 +23,7 @@
   --light_blue_opacity: rgba(11, 53, 84, 0.8);
   --clicked_link: #579eff;
   --shadow: rgba(0, 0, 0, 0.75);
+  --contact-info: rgba(255, 255, 255, 0.8);
 }
 
 body {
@@ -110,7 +111,7 @@ h6 {
   position: relative;
   top: 0;
   color: var(--black);
-  width: 570px;
+  max-width: 570px;
   height: 860px;
   background: var(--card_yellow);
 }
@@ -629,6 +630,7 @@ input {
 }
 
 li > span {
+  display: block;
   margin-left: 30px;
 }
 
@@ -856,6 +858,7 @@ li:active {
 }
 
 .contact-form .title {
+  text-align: center;
   font-size: 30px;
   color: var(--txt_primary_white);
 }
@@ -981,4 +984,100 @@ li:active {
   position: absolute;
   top: 10px;
   right: 14px;
+}
+
+@media all and (max-width: 1170px) {
+  .wrapper {
+    max-width: calc(1170px - 2 * 120px);
+  }
+
+  .dark-banner .input-fields {
+    flex-wrap: wrap;
+  }
+
+  .dark-banner .input-fields > .button {
+    margin: 50px auto 0 auto;
+  }
+
+  .sclad .cards {
+    margin-top: 0;
+    flex-wrap: wrap;
+  }
+
+  .sclad .cards:before,
+  .sclad .cards:after {
+    display: none;
+  }
+
+  .sclad .cards > img {
+    margin-bottom: 40px;
+  }
+
+  li > span {
+    margin-left: 40px;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .banner .card {
+    max-width: 420px;
+  }
+
+  .wrapper {
+    max-width: calc(1024px - 2 * 100px);
+  }
+
+  .sclad .cards {
+    /*display: none;*/
+  }
+
+  .answer-wrapper {
+    display: none;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .wrapper {
+    max-width: calc(768px - 2 * 30px);
+  }
+
+  .sclad .cards {
+    height: ;
+    width: fit-content;
+  }
+
+  .sclad .cards:before,
+  .sclad .cards:after {
+    top: 50%;
+    bottom: 50%;
+    display: block;
+  }
+
+  .sclad .cards > img {
+    margin: 0;
+    display: none;
+  }
+
+  .sclad .cards > img:nth-child(2) {
+    display: block;
+  }
+
+  .input-wrapper {
+    max-width: 300px;
+  }
+
+  .contact-info {
+    background: var(--contact-info);
+    justify-content: space-between;
+  }
+
+  .is-big {
+    height: 70px;
+    max-width: 300px;
+  }
+
+  .dark-banner .button,
+  .contact-form .button {
+    max-width: 300px;
+  }
 }
