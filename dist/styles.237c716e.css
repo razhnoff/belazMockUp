@@ -23,6 +23,7 @@
   --light_blue_opacity: rgba(11, 53, 84, 0.8);
   --clicked_link: #579eff;
   --shadow: rgba(0, 0, 0, 0.75);
+  --contact-info: rgba(255, 255, 255, 0.8);
 }
 
 body {
@@ -110,7 +111,7 @@ h6 {
   position: relative;
   top: 0;
   color: var(--black);
-  width: 570px;
+  max-width: 570px;
   height: 860px;
   background: var(--card_yellow);
 }
@@ -300,8 +301,6 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*justify-content: center;*/
-  /*text-align: center;*/
   padding-top: 100px;
 }
 
@@ -629,6 +628,7 @@ input {
 }
 
 li > span {
+  display: block;
   margin-left: 30px;
 }
 
@@ -856,6 +856,7 @@ li:active {
 }
 
 .contact-form .title {
+  text-align: center;
   font-size: 30px;
   color: var(--txt_primary_white);
 }
@@ -981,6 +982,303 @@ li:active {
   position: absolute;
   top: 10px;
   right: 14px;
+}
+
+@media all and (max-width: 1170px) {
+  .wrapper {
+    max-width: calc(1170px - 2 * 120px);
+  }
+
+  .dark-banner .input-fields {
+    flex-wrap: wrap;
+  }
+
+  .dark-banner .input-fields > .button {
+    margin: 50px auto 0 auto;
+  }
+
+  .sclad .cards {
+    margin-top: 0;
+    flex-wrap: wrap;
+  }
+
+  .sclad .cards:before,
+  .sclad .cards:after {
+    display: none;
+  }
+
+  .sclad .cards > img {
+    margin-bottom: 40px;
+  }
+
+  li > span {
+    margin-left: 40px;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .banner .card {
+    max-width: 420px;
+  }
+
+  .wrapper {
+    max-width: calc(1024px - 2 * 100px);
+  }
+
+  .answer-wrapper {
+    display: none;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .wrapper {
+    max-width: calc(768px - 2 * 30px);
+  }
+
+  .sclad .cards {
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .sclad .cards:before,
+  .sclad .cards:after {
+    top: 50%;
+    bottom: 50%;
+    display: block;
+  }
+
+  .sclad .cards > img {
+    margin: 0;
+    display: none;
+  }
+
+  .sclad .cards > img:nth-child(2) {
+    display: block;
+  }
+
+  .input-wrapper {
+    max-width: 300px;
+  }
+
+  .contact-info {
+    background: var(--contact-info);
+    justify-content: space-between;
+  }
+
+  .is-big {
+    height: 70px;
+    max-width: 300px;
+  }
+
+  .dark-banner .button,
+  .contact-form .button {
+    max-width: 300px;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .title {
+    text-align: center !important;
+    font-size: 26px !important;
+  }
+
+  .banner .card {
+    max-width: 100%;
+  }
+
+  .contact_info {
+    margin-bottom: 20px;
+  }
+
+  .banner {
+    background: none;
+  }
+
+  .header .wrapper,
+  .contact_container .wrapper,
+  .dark-banner .wrapper {
+    max-width: 90%;
+  }
+
+  .header .wrapper {
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .dark-banner {
+    height: auto;
+  }
+
+  .dark-banner .title:last-child {
+    margin-bottom: 30px;
+  }
+
+  .contact_container {
+    height: auto;
+  }
+
+  .contact_container .wrapper {
+    padding-right: 0;
+  }
+
+  .contact_container .input-fields {
+    flex-wrap: wrap;
+  }
+
+  .contact_container .contact-info {
+    justify-content: center;
+    margin-top: 0;
+    flex-wrap: wrap;
+  }
+
+  .contact-info > p {
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .contact-info .button {
+    margin: 30px 0;
+  }
+
+  .input-wrapper {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .brigade .wrapper {
+    max-width: 90%;
+  }
+
+  .brigade .card:nth-child(n) {
+    max-width: 40%;
+  }
+
+  .brigade .card-item {
+    width: 100px;
+    height: 100px;
+  }
+
+  .brigade .card:nth-child(n) .card-item:before {
+    width: 100px;
+    height: 100px;
+  }
+
+  .brigade .cards {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .credentials .wrapper {
+    max-width: 90%;
+  }
+
+  .cred-cards {
+    flex-wrap: wrap;
+  }
+
+  .cred-item {
+    margin-bottom: 30px;
+  }
+
+  .dark-banner-2 .wrapper {
+    max-width: 90%;
+  }
+
+  .dark-banner-2 .cards {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card-container:nth-child(n) {
+    max-width: 120px;
+  }
+
+  .sclad .wrapper,
+  .location .wrapper,
+  .contact-form .wrapper {
+    max-width: 90%;
+  }
+
+  .contact-form .input-fields {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer .wrapper {
+    max-width: 90%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .belaz_pros_info .wrapper {
+    max-width: 90%;
+    flex-wrap: wrap;
+  }
+
+  .belaz_pros_info {
+    height: auto;
+  }
+
+  .belaz_pros_info .wrapper-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .wrapper-container .belaz-plus {
+    max-width: 108px;
+    margin-bottom: 30px;
+  }
+
+  .questions .wrapper {
+    max-width: 90%;
+  }
+
+  .questions_wrapper {
+    flex-wrap: wrap;
+  }
+
+  .question_numbers {
+    margin-left: 15px;
+  }
+
+  .question_numbers > li {
+    margin-bottom: 30px;
+  }
+
+  .sclad .cards > img:nth-child(2) {
+    width: 100vw;
+  }
+
+  .work .wrapper {
+    max-width: 90%;
+  }
+
+  .work .cards {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .work .item:nth-child(n) {
+    max-width: 40%;
+  }
+}
+
+@media all and (min-width: 320px) {
+  .header .wrapper {
+    justify-content: center;
+  }
+
+  .header .button {
+    margin-top: 20px;
+  }
+
+  .banner .card .wrapper {
+    max-width: 90%;
+  }
+
+  .card .subtitle {
+    text-align: center;
+  }
 }
 
 
