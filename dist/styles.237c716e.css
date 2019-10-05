@@ -53,6 +53,7 @@ h6 {
 .wrapper {
   position: relative;
   margin: 0 auto;
+  width: 100%;
   max-width: calc(1920px - 375px * 2);
   min-width: calc(320px - 15px * 2);
 }
@@ -79,6 +80,7 @@ h6 {
 }
 
 .contact_info {
+  margin-left: 10em;
   max-width: 96px;
   line-height: 2;
   font-size: 14px;
@@ -86,6 +88,7 @@ h6 {
 }
 
 .contact_numbers {
+  margin-right: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,6 +98,15 @@ h6 {
 
 .contact_numbers > span {
   cursor: pointer;
+}
+
+.contact_numbers > span:first-child {
+  margin-bottom: 14px;
+}
+
+.contact_group {
+  display: flex;
+  align-items: center;
 }
 
 .banner {
@@ -120,6 +132,11 @@ h6 {
   max-width: 346px;
   margin: 0 auto;
   padding-top: 100px;
+}
+
+.card .title {
+  line-height: 1.38;
+  text-transform: uppercase;
 }
 
 .title {
@@ -207,6 +224,7 @@ h6 {
 }
 
 input {
+  position: relative;
   font: 13px / normal var(--font_regular);
   text-transform: uppercase;
   color: var(--inpt_light_gray);
@@ -215,12 +233,25 @@ input {
   border: none;
   outline: none;
   height: 100%;
-  width: 60%;
-  margin-left: 30px;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 50px;
 }
 
-.input-img {
+.input-wrapper:nth-child(n):after {
+  position: absolute;
+  right: 0;
   margin-right: 30px;
+  z-index: 100;
+}
+
+.input-wrapper:nth-child(2):after,
+.contact-form .input-wrapper:first-child:after {
+  content: url("/call-answer.b3e9eafd.png");
+}
+
+.contact_container .input-wrapper:first-child:after {
+  content: url("/envelope.cad430da.png");
 }
 
 .contact_container .input-wrapper:nth-child(1) .input-img {
@@ -252,6 +283,7 @@ input {
 }
 
 .input-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1265,19 +1297,19 @@ li:active {
 
 @media all and (min-width: 320px) {
   .header .wrapper {
-    justify-content: center;
+    /*justify-content: center;*/
   }
 
   .header .button {
-    margin-top: 20px;
+    /*margin-top: 20px;*/
   }
 
   .banner .card .wrapper {
-    max-width: 90%;
+    /*max-width: 90%;*/
   }
 
   .card .subtitle {
-    text-align: center;
+    /*text-align: center;*/
   }
 }
 
