@@ -106,6 +106,7 @@ h6 {
 
 .contact_group {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -325,7 +326,6 @@ input {
 }
 
 .belaz_pros_info {
-  height: 587px;
   background: var(--dark_blue);
 }
 
@@ -350,8 +350,9 @@ input {
 }
 
 .wrapper-container {
-  margin: 100px auto 0 auto;
+  margin: 100px auto 100px auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   max-width: calc(198px + 103px + 215px + 90px + 220px + 78px + 215px);
@@ -479,8 +480,8 @@ input {
   margin: 100px 0;
   max-width: calc(283px + 94px + 332px + 83px + 301px);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  /*align-items: center;*/
 }
 
 .cred-item {
@@ -542,6 +543,7 @@ input {
   width: 100%;
   margin-top: 100px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -645,6 +647,7 @@ input {
 .questions_wrapper {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 100px;
 }
@@ -1049,6 +1052,10 @@ li:active {
 }
 
 @media all and (max-width: 1024px) {
+  .contact_info {
+    margin-left: 0;
+  }
+
   .banner .card {
     max-width: 420px;
   }
@@ -1064,7 +1071,11 @@ li:active {
 
 @media all and (max-width: 768px) {
   .wrapper {
-    max-width: calc(768px - 2 * 30px);
+    max-width: 95%;
+  }
+
+  .banner > .wrapper {
+    max-width: 100%;
   }
 
   .sclad .cards {
@@ -1106,6 +1117,10 @@ li:active {
   .contact-form .button {
     max-width: 300px;
   }
+
+  .cards {
+    justify-content: space-around;
+  }
 }
 
 @media all and (max-width: 425px) {
@@ -1120,6 +1135,15 @@ li:active {
 
   .contact_info {
     margin-bottom: 20px;
+  }
+
+  .contact_group {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .contact_numbers {
+    margin-right: 0;
   }
 
   .banner {
@@ -1247,10 +1271,6 @@ li:active {
     flex-wrap: wrap;
   }
 
-  .belaz_pros_info {
-    height: auto;
-  }
-
   .belaz_pros_info .wrapper-container {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -1295,20 +1315,12 @@ li:active {
   }
 }
 
-@media all and (min-width: 320px) {
-  .header .wrapper {
-    /*justify-content: center;*/
-  }
-
-  .header .button {
-    /*margin-top: 20px;*/
+@media all and (max-width: 375px) {
+  .contact_numbers {
+    font-size: 12px;
   }
 
   .banner .card .wrapper {
-    /*max-width: 90%;*/
-  }
-
-  .card .subtitle {
-    /*text-align: center;*/
+    max-width: 90%;
   }
 }
