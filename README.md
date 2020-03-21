@@ -1,5 +1,5 @@
 # Belaz mockup
 
-[https://razhnoff.github.io/belazMockup/]["Лэндинг Белаза"]
+[Лэндинг белаза][https://razhnoff.github.io/belazMockup/]
 
 ![image Belaz Desktop](/belaz.png?raw=true "Belaz Title")
