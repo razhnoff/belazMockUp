@@ -15,6 +15,7 @@
   --txt_primary_white: #fff;
   --card_yellow: #f7b516;
   --border_yellow: #ffbc3b;
+  --dark_yellow: #e6a935;
   --font_regular: "Proxima Nova";
   --inpt_gray: #f2f2f2;
   --inpt_light_gray: #818181;
@@ -24,6 +25,7 @@
   --clicked_link: #579eff;
   --shadow: rgba(0, 0, 0, 0.75);
   --contact-info: rgba(255, 255, 255, 0.8);
+  --dark_blue: #0d5fa2;
 }
 
 body {
@@ -77,6 +79,10 @@ h6 {
   box-sizing: border-box;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--dark_blue);
 }
 
 .contact_info {
@@ -448,6 +454,10 @@ input {
   height: 70px;
 }
 
+.dark-banner .button:hover {
+  background-color: var(--dark_yellow);
+}
+
 .dark-banner .contact_info {
   font-size: 14px;
   color: var(--txt_primary_white);
@@ -488,6 +498,7 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 0.8rem;
 }
 
 .cred-item > span {
@@ -914,7 +925,11 @@ li:active {
 .contact-form .button {
   width: 370px;
   height: 70px;
-  background: var(--card_yellow);
+  background-color: var(--card_yellow);
+}
+
+.contact-form .button:hover {
+  background-color: var(--dark_yellow);
 }
 
 .location {
